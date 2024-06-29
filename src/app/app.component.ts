@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'temp-ref-view-child-learn';
+  email_add='nikita';
+  changedData(inputElement:any) {
+    inputElement.value = "Nikita Kopnar";
+    inputElement.focus();
+  }
+  onSubmit(form:any) {
+    this.email_add = form.value.email;
+  }
 }
